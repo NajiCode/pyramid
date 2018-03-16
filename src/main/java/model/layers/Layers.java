@@ -1,10 +1,13 @@
-package model;
+package model.layers;
+
+import model.Drawable;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Layers {
+public class Layers implements Drawable {
     private List<Layer> layers;
+
     public Layers() {
         this.layers = new ArrayList<Layer>();
     }

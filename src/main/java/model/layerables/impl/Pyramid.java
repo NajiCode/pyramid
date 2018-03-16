@@ -1,7 +1,11 @@
-package model;
+package model.layerables.impl;
 
 
-public class Pyramid {
+import model.Drawable;
+import model.layerables.Layerable;
+import model.layers.Layers;
+
+public class Pyramid implements Layerable, Drawable {
     private Layers layers;
 
     public Pyramid() {

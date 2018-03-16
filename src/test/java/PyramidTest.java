@@ -1,4 +1,4 @@
-import model.Pyramid;
+import model.layerables.impl.Pyramid;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
