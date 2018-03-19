@@ -1,7 +1,7 @@
 package model.layers.Blocks;
 
 import model.Drawable;
-import model.Qualities.Quality;
+import model.qualities.Quality;
 
 public class Block implements Drawable{
     private final Quality quality;

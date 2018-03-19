@@ -1,10 +1,10 @@
-package model.Qualities.impl;
+package model.qualities.impl;
 
-import model.Qualities.Quality;
+import model.qualities.Quality;
 
 public class HighQuality implements Quality {
 
-    public static final String SYMBOL = "X";
+    private static final String SYMBOL = "X";
 
     public String type() {
         return SYMBOL;

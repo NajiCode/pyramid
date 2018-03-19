@@ -1,8 +1,8 @@
-package model.Qualities;
+package model.qualities;
 
 
-import model.Qualities.impl.HighQuality;
-import model.Qualities.impl.LowQuality;
+import model.qualities.impl.HighQuality;
+import model.qualities.impl.LowQuality;
 
 public class QualityFactory {
     public Quality create(String type) {

@@ -1,14 +1,18 @@
 package model.layers;
 
-import model.Qualities.QualityFactory;
+import model.qualities.QualityFactory;
 import model.layers.Blocks.Block;
-import model.Qualities.Quality;
+import model.qualities.Quality;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Layer {
 
+    private static final String HIGH_QUALITY = "highQuality";
+    private static final String LOW_QUALITY = "lowQuality";
+    private static final int NBR_OF_SLAVES_PER_BLOCK = 50;
+    private static final int COST_PER_BLOCK = 2;
     private Layer previousLayer;
     private List<Block> blocks;
     private QualityFactory qualityFactory;
@@ -29,12 +33,12 @@ public class Layer {
         int nbrOfSlaves = Integer.valueOf(slavesModel);
         int nbrOfAnks = Integer.valueOf(anksModel);
 
-        int nbrOfBlocks = nbrOfSlaves / 50;
+        int nbrOfBlocks = nbrOfSlaves / NBR_OF_SLAVES_PER_BLOCK;
 
-        if (nbrOfBlocks * 2 <= nbrOfAnks) {
-            addBlocks(nbrOfBlocks, "highQuality");
+        if (nbrOfBlocks * COST_PER_BLOCK <= nbrOfAnks) {
+            addBlocks(nbrOfBlocks, HIGH_QUALITY);
         } else {
-            addBlocks(nbrOfBlocks,"lowQuality");
+            addBlocks(nbrOfBlocks, LOW_QUALITY);
         }
     }
 

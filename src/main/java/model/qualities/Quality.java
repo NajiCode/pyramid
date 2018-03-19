@@ -1,4 +1,4 @@
-package model.Qualities;
+package model.qualities;
 
 public interface Quality {
     String type();
