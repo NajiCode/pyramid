@@ -1,4 +1,3 @@
-import model.layerables.impl.Pyramid;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -11,7 +10,7 @@ public class PyramidTest {
         pyramid.addLayer("250 Slaves, 10 Anks");
         assertEquals("XXXXX", pyramid.print());
         pyramid.addLayer("150 Slaves, 4 Anks");
-        assertEquals("_VVV_\nXXXXX", pyramid.print());
+        assertEquals("_VVV_\n" + "XXXXX", pyramid.print());
         pyramid.addLayer("50 Slaves, 2 Anks");
         assertEquals(" _X_ \n_VVV_\nXXXXX", pyramid.print());
     }
@@ -29,5 +28,4 @@ public class PyramidTest {
         pyramid.addLayer("150 Slaves, 3 Anks");
         assertEquals(" VVV \n_XXX_\nXXXXX", pyramid.print());
     }
-
 }
